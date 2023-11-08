@@ -195,7 +195,7 @@ class Boy:
             self.ball_count -= 1
             ball = Ball(self.x, self.y, self.face_dir*10)
             game_world.add_object(ball) # 보이는 월드 삽입
-            game_world.add_collision_pair('zombie:ball', None, ball)
+            game_world.add_collision_pair('zombie:ball', None, ball) # 공이 만들어질 때 !! 중요
 
     def update(self):
         self.state_machine.update()
